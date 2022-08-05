@@ -5,7 +5,8 @@
 
 # Update or Install oh-my-zsh
 if ! type "omz" > /dev/null; then
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	# https://github.com/ohmyzsh/ohmyzsh#unattended-install
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 else 
 	omz update
 fi
