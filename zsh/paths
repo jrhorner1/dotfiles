@@ -1,0 +1,15 @@
+###
+#   PATH additions
+# zsh documentation: https://zsh.sourceforge.io/Guide/zshguide02.html#l24
+# See also: https://gist.github.com/Linerre/f11ad4a6a934dcf01ee8415c9457e7b2
+###
+additions=(\
+        ~/.gem/ruby/2.6.0/bin\
+        ~/Library/Python/3.9/bin\
+        ~/.rd/bin\
+        ~/bin\
+)
+for addition in "${additions[@]}"; do
+        path=($addition $path)
+done
+export PATH

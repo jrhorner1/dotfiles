@@ -1,0 +1,7 @@
+###
+#   Load ssh key passphrase from keychain
+#
+#     To update passphrase in keychain:
+#     ssh-add --apple-use-keychain ~/.ssh/id_rsa
+###
+ssh-add -q --apple-load-keychain ~/.ssh/id_rsa

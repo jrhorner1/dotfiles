@@ -1,0 +1,15 @@
+export ZSH="$HOME/.oh-my-zsh"
+
+# https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="robbyrussell"
+
+# https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
+plugins=(git kubectl zsh-interactive-cd)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+dotfiles=(paths aliases completions ssh ring bashrc)
+for file in "${dotfiles[@]}" ; do
+    source "${HOME}/.zsh/${file}"
+done

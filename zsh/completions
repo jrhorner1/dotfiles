@@ -1,0 +1,7 @@
+###
+#   Completions
+###
+# kubectl - https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/#enable-shell-autocompletion
+autoload -Uz compinit
+compinit
+source <(kubectl completion zsh)

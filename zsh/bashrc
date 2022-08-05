@@ -1,0 +1,16 @@
+###
+#   Generate ~/.bashrc
+###
+bash_additions=
+i=0
+for addition in "${additions[@]}"; do
+	if [ $i -eq 0 ]; then
+		bash_additions=$addition
+	else
+		bash_additions=${addition}:${bash_additions}
+	fi
+	((i=i+1))
+done
+cat <<EOF > ~/.bashrc
+PATH=${bash_additions}:\$PATH
+EOF

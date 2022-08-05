@@ -1,0 +1,17 @@
+###
+#   Ring Network SSH
+###
+ringssh ()
+{
+    if [[ -z "$1" ]]; then
+        echo "No RING server specified!" 1>&2;
+        echo "You may view a full list of these servers here:" 1>&2;
+        echo 1>&2;
+        echo "https://ring.nlnog.net/participants/ (list)" 1>&2;
+        echo "http://map.ring.nlnog.net/ (map)" 1>&2;
+        return 1;
+    else
+        ssh "$1.ring.nlnog.net";
+        return $?;
+    fi
+}

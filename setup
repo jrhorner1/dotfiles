@@ -1,0 +1,18 @@
+#!/usr/bin/env zsh
+
+# Source ~/.zshrc to load oh-my-zsh
+. ~/.zshrc
+
+# Update or Install oh-my-zsh
+if ! type "omz" > /dev/null; then
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+else 
+	omz update
+fi
+
+# Copy dotfiles and zshrc to home directory
+cp -a ./zsh ~/.zsh
+cp ./zshrc ~/.zshrc
+
+# Reload the current zsh session
+exec zsh
