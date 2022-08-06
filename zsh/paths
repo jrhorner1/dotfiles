@@ -10,6 +10,8 @@ additions=(\
         ~/bin\
 )
 for addition in "${additions[@]}"; do
-        path=($addition $path)
+        if [[ -d ${addition} ]]; then
+                path=(${addition} ${path})
+        fi
 done
 export PATH
