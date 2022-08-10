@@ -9,7 +9,7 @@ plugins=(git kubectl zsh-interactive-cd)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-dotfiles=(paths aliases completions ssh ring bashrc)
+dotfiles=(paths aliases completions ssh functions ring bashrc)
 for file in "${dotfiles[@]}" ; do
     source "${HOME}/.zsh/${file}"
 done

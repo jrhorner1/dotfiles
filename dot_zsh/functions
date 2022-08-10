@@ -1,0 +1,12 @@
+# Add python 3.10 to the begining of your PATH
+activate_python3.10 () {
+	bin=/opt/homebrew/opt/python@3.10/bin
+	path=( ${bin} ${path} )
+	if [[ ! -d ${bin} ]]; then
+		brew install python@3.10 
+	fi
+} 
+
+deactivate_python3.10 () {
+	path=( ${path[@]:#*python@3.10*} )
+}
